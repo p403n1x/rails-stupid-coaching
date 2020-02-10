@@ -1,0 +1,18 @@
+
+<div class="banner"><h1>Questions#answer</h1></div>
+
+<blockquote>
+  <p>  <%= params[:question] %></p>
+  <footer>—You</footer>
+</blockquote>
+<blockquote>
+  <% if params[:question].include? "?" %>
+  <p><%= "Silly question, get dressed and go to work!" %></p>
+  <% elsif params[:question] == "I am going to work" %>
+  <p><%= "Great!" %></p>
+  <% else %>
+  <p><%= "I don't care, get dressed and go to work!" %></p>
+  <% end %>
+  <footer>—Your coach</footer>
+</blockquote>
+<%= link_to "Another questions ?", "ask" %>
